@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Flights | SkyWay</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="index.html">✈ SkyWay</a>
+    <a href="index.html">Home</a>
+  </nav>
+
+  <main class="page">
+    <div class="section-head">
+      <span class="eyebrow">BOOK YOUR JOURNEY</span>
+      <h1>Where would you like to fly?</h1>
+      <p>Choose any available domestic or international route.</p>
+    </div>
+
+    <div class="search-card">
+      <div class="field">
+        <label for="type">Trip Type</label>
+        <select id="type">
+          <option>Domestic</option>
+          <option>International</option>
+        </select>
+      </div>
+
+      <div class="field suggest-wrap">
+        <label for="from">From</label>
+        <input id="from" autocomplete="off" placeholder="Departure city" oninput="showSuggestions('from')">
+        <div id="fromList" class="suggestions"></div>
+      </div>
+
+      <button class="swap" type="button" onclick="swapLocations()">⇄</button>
+
+      <div class="field suggest-wrap">
+        <label for="to">To</label>
+        <input id="to" autocomplete="off" placeholder="Destination city" oninput="showSuggestions('to')">
+        <div id="toList" class="suggestions"></div>
+      </div>
+
+      <div class="field">
+        <label for="date">Travel Date</label>
+        <input id="date" type="date">
+      </div>
+
+      <button class="btn primary search-btn" onclick="searchFlights()">Search Flights</button>
+    </div>
+
+    <div class="route-note">All listed routes operate daily in this project simulation.</div>
+  </main>
+
+  <script src="js/search.js"></script>
+</body>
+</html>

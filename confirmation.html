@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boarding Pass | SkyWay</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="index.html">✈ SkyWay</a>
+  </nav>
+
+  <main class="page confirmation-page">
+    <div class="success">✓ Booking Confirmed Successfully!</div>
+
+    <div id="boardingPass" class="boarding-pass"></div>
+
+    <div class="actions">
+      <button class="btn primary" onclick="window.print()">🖨 Print Boarding Pass</button>
+      <a class="btn secondary" href="search.html">Book Another Flight</a>
+    </div>
+  </main>
+
+  <script src="js/confirmation.js"></script>
+</body>
+</html>

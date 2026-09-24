@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Seat | SkyWay</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="index.html">✈ SkyWay</a>
+  </nav>
+
+  <main class="page">
+    <div class="section-head">
+      <span class="eyebrow">STEP 2 OF 4</span>
+      <h1>Select Your Seat</h1>
+      <p>Choose one or more available seats.</p>
+    </div>
+
+    <div class="seat-layout">
+      <div class="aircraft">
+        <div class="cockpit">✈ COCKPIT</div>
+        <div id="seatMap"></div>
+
+        <div class="legend">
+          <span><i class="available"></i>Available</span>
+          <span><i class="selected"></i>Selected</span>
+          <span><i class="occupied"></i>Occupied</span>
+        </div>
+      </div>
+
+      <div class="summary-card">
+        <h2>Trip Summary</h2>
+        <div id="flightSummary"></div>
+        <hr>
+        <p>Selected Seats</p>
+        <strong id="selectedSeats">None</strong>
+        <button class="btn primary full" onclick="continueSeat()">Continue to Meals →</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/seat.js"></script>
+</body>
+</html>

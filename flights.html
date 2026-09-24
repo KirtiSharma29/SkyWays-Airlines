@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Available Flights | SkyWay</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="index.html">✈ SkyWay</a>
+    <a href="search.html">Modify Search</a>
+  </nav>
+
+  <main class="page">
+    <div id="loader" class="loader">
+      <div class="spinner"></div>
+      <p>Finding the best flights...</p>
+    </div>
+
+    <div id="flightPage" style="display:none">
+      <div class="results-tools">
+        <div>
+          <span class="eyebrow">AVAILABLE FLIGHTS</span>
+          <h1>Choose Your Flight</h1>
+        </div>
+
+        <div class="filters">
+          <select id="sort" onchange="displayFlights()">
+            <option value="">Sort By</option>
+            <option value="price">Cheapest First</option>
+            <option value="duration">Fastest First</option>
+          </select>
+
+          <select id="timeFilter" onchange="displayFlights()">
+            <option value="">All Times</option>
+            <option value="morning">Morning</option>
+            <option value="afternoon">Afternoon</option>
+            <option value="evening">Evening</option>
+            <option value="night">Night</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="flights"></div>
+    </div>
+  </main>
+
+  <script src="js/flights.js"></script>
+</body>
+</html>

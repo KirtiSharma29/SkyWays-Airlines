@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meals & Payment | SkyWay</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a class="brand" href="index.html">✈ SkyWay</a>
+  </nav>
+
+  <main class="page">
+    <div class="section-head">
+      <span class="eyebrow">STEP 3 OF 4</span>
+      <h1>Meals & Payment</h1>
+      <p>Select meals and complete the demo payment.</p>
+    </div>
+
+    <div class="payment-grid">
+      <section>
+        <h2>Choose Your Meal</h2>
+        <div id="foodGrid" class="food-grid"></div>
+      </section>
+
+      <section class="payment-card">
+        <h2>Payment Details</h2>
+
+        <div class="amounts">
+          <p>Tickets <span id="ticketAmount">₹0</span></p>
+          <p>Meals <span id="foodAmount">₹0</span></p>
+          <h3>Total <span id="totalAmount">₹0</span></h3>
+        </div>
+
+        <label for="cardName">Cardholder Name</label>
+        <input id="cardName" placeholder="Name on card">
+
+        <label for="cardNumber">Card Number</label>
+        <input id="cardNumber" maxlength="19" placeholder="1234 5678 9012 3456">
+
+        <div class="two">
+          <div>
+            <label for="expiry">Expiry</label>
+            <input id="expiry" placeholder="MM/YY">
+          </div>
+          <div>
+            <label for="cvv">CVV</label>
+            <input id="cvv" maxlength="3" type="password" placeholder="CVV">
+          </div>
+        </div>
+
+        <button class="btn primary full" onclick="makePayment()">Pay & Confirm Booking</button>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/payment.js"></script>
+</body>
+</html>
